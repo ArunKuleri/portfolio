@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+:root{
+    --bg-color:#21262f;
+    --second-bg-color:#13151bee;
+    --text-color:#fff;
+    --main-color:rgb(125, 18, 18);
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    text-align: center;
+    font-size: large;
+
+}
+h3{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    text-align: center;
+
+
+}
+h3 span{
+    font-weight: 1000;
+}
+h1{
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 40px;
+    text-align: center;
+
+}
+.skills h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+
+}
+.progress-bar{
+    background: var(--text-color);
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+}
+.progress-bar div{
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+    background: var(--main-color);
+}
+.progress-bar div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.html{
+    background: var(--main-color);
+    animation: html 1s linear forwards;
+}
+.CSS{
+    background: var(--main-color);
+    animation: CSS 1s linear forwards;
+}
+.JavaScript{
+    background: var(--main-color);
+    animation: JavaScript 1s linear forwards;
+}
+.React{
+    background: var(--main-color);
+    animation: React 1s linear forwards;
+}
+.html span{
+    border: 1px solid rgb(125, 18, 18);;
+}
+.CSS span{
+    border: 1px solid rgb(125, 18, 18);;
+
+}
+.JavaScript span{
+    border: 1px solid rgb(125, 18, 18);;
+}
+.React span{
+    border: 1px solid rgb(125, 18, 18);;
+}
+@keyframes html{
+    100%{
+        width: 86%;
+    }
+}
+@keyframes CSS{
+    100%{
+        width: 75%;
+    }
+}
+@keyframes JavaScript{
+    100%{
+        width: 65%;
+    }
+}
+@keyframes React{
+    100%{
+        width: 45%;
+    }
+}
+
