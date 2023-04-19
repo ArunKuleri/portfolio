@@ -31,6 +31,22 @@ window.onscroll = ()=> {
 
 
 };
+function validate(){
+    var username = document.getElementById("name");
+    var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    var subject = document.getElementById("subject");
+    if(username.value.trim()==""|| email.value.trim()==""||
+    phone.value.trim()==""|| subject.value.trim()==""){
+        alert("no blank values allowed");
+        return false;
+    }
+    else{
+        true;
+    }
+    
+
+}
 ScrollReveal({
      reset: true,
      distance:'80px',
@@ -43,21 +59,23 @@ ScrollReveal({
     ScrollReveal().reveal('.home-content h1,.about-img', { origin: left });
     ScrollReveal().reveal('.home-content p,.about-content', { origin: right });
 
-    function sendEmail(e){
-        console.log("helo")
-        e.preventDefault();
+    $("#submit-form").submit((e)=>{
+        console.log("hello")
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbxzYgg2dH63LMXwzf3V5KUI0Pzq-owuY3MYgrlBENBuUWCYQNmZDvNgBV8SGDyUIk3a/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
 
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "arunk.aru1@gmail.com",
-            Password : "033E380C9794A20F9D46A75F2ED519253C1F",
-            To : 'arunk.aru1@gmail.com',
-            From : "arunk.aru1@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-    }
+            }
+        })
+    })
    
   

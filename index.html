@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+   
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -22,7 +25,7 @@
         </nav>
     </header>
     <section class="home" id="home">
-        <div class="home-content">
+        <div class="home-content">  
             <h3>Hello, It's Me</h3>
             <h1>Arun Kuleri</h1>
             <h3>And I'm a <span >FullStack Developer</span></h3>
@@ -32,18 +35,14 @@
                 <a href="https://twitter.com/ArunKuleri"><i class='bx bxl-twitter'></i></box-icon></a>
                 <a href="https://www.linkedin.com/in/arun-kuleri-903413124/"><i class='bx bxl-linkedin'></i></a>    
             </div>
-            <a href="Arun_Kuleri_Resume007.pdf" class="btn">Download CV</a>
+            <a href="Arun_Kuleri_Resume007.pdf" class="btn" download="Arun_Kuleri_Resume007">Download CV</a>
         </div>
-        <div class="home-img">
-            <img src="propic.jpg" alt="">
-        </div>
+      
         
     </section>
         
         <section class="about" id="about">
-            <div class="about-img">
-                <img src="propic-removebg-preview.png" alt="">
-            </div>
+            
             <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3>Full stack Developer</h3>
@@ -155,9 +154,11 @@
         </section>
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me!</span></h2>
-            <form method="post"  
-            onsubmit="sendEmail(event)"
-            action="https://script.google.com/macros/s/AKfycbzcq0f8LoWXx2dB8AQ01QiczBzBqSHX5Te_FAt9br3H2zOmlP39N1Px93X0N1Wz2j_7Wg/exec">
+            <form id="submit-form" 
+            method="post"
+            action="message.html"
+            onsubmit="return validate()"
+            >
                 <div class="input-box">
                     <input type="text" placeholder="Full Name" id="name" name="name" required>
                     <input type="email" placeholder="Email" id="email" name="email" required>
@@ -180,13 +181,15 @@
         </footer>
 
         <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://smtpjs.com/v3/smtp.js">
-        </script>
+        
+         <script src="script.js"></script>
+         
+        
 
        
 
     
-   <script src="script.js"></script>
+   
   
 </body>
 </html>           
